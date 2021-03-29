@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Contra SFX (15).wav-bd79614139fe3928c6cf81178ae304b9.sample"
+
+[deps]
+
+source_file="res://BGM-SFX/Contra SFX (15).wav"
+source_md5="f77a7e98b8412c7173e425a707f36b14"
+
+dest_files=[ "res://.import/Contra SFX (15).wav-bd79614139fe3928c6cf81178ae304b9.sample" ]
+dest_md5="00bf7c27311d1d2b05255ad3eeaf3f34"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

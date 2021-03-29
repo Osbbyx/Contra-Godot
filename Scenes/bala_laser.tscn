@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/bala_laser.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/proyectiles.png" type="Texture" id=2]
+[ext_resource path="res://BGM-SFX/Contra SFX (13).wav" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.98882, 2.8269 )
+
+[node name="cuerpoBala" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+potencia = 200
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="0"]
+
+position = Vector2( -2.567, 1.85095 )
+scale = Vector2( 0.3683, 0.435095 )
+rect = Rect2( -10, -10, 20, 20 )
+
+[node name="1" type="KinematicBody2D" parent="." index="1" groups=[
+"bala",
+]]
+
+editor/display_folded = true
+position = Vector2( 16.5, 0 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="1" index="0"]
+
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 7
+frame = 8
+_sections_unfolded = [ "Animation" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1" index="1"]
+
+position = Vector2( 0, 1.5 )
+shape = SubResource( 1 )
+
+[node name="3" type="KinematicBody2D" parent="." index="2" groups=[
+"bala",
+]]
+
+editor/display_folded = true
+position = Vector2( -14.5, 0 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="3" index="0"]
+
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 7
+frame = 8
+_sections_unfolded = [ "Animation" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3" index="1"]
+
+position = Vector2( 0, 1.5 )
+shape = SubResource( 1 )
+
+[node name="2" type="KinematicBody2D" parent="." index="3" groups=[
+"bala",
+]]
+
+editor/display_folded = true
+position = Vector2( 1, 0 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="2" index="0"]
+
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 7
+frame = 8
+_sections_unfolded = [ "Animation" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2" index="1"]
+
+position = Vector2( 0, 1.5 )
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+
+

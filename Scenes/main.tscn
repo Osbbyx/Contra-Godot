@@ -1,0 +1,1596 @@
+[gd_scene load_steps=73 format=2]
+
+[ext_resource path="res://Scenes/main.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Jugador1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Vida_J1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Jugador2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Vida_J2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/bala_basica.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/bala_burbuja.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/bala_abanico.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/bala_laser.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/bala_giratoria.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/bala_enemigo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Bala_Boss1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/gameover.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Tile/nivel1.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Maquina_PowerUP.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/EnemigoBasse.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/EnemigoSelva.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Puente Entero.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Torreta.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/PowerUp.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Boss_Base.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=22]
+[ext_resource path="res://BGM-SFX/03_-_Contra_-_NES_-_Jungle.ogg" type="AudioStream" id=23]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 369.959, 2.905 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 81.6034, 3.53846 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 127.465, 4.80543 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 247.059, 5.43891 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 113.154, 3.53846 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 75.4802, 2.90497 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.0928, 4.80543 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 26.3704, 3.16739 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.0837, 2.53389 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 46.4277, 4.43433 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.3037, 1.90039 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.7292, 2.53387 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.449, 2.534 )
+
+[sub_resource type="RectangleShape2D" id=14]
+
+custom_solver_bias = 0.0
+extents = Vector2( 80.6804, 3.16734 )
+
+[sub_resource type="RectangleShape2D" id=15]
+
+custom_solver_bias = 0.0
+extents = Vector2( 49.8564, 3.80081 )
+
+[sub_resource type="RectangleShape2D" id=16]
+
+custom_solver_bias = 0.0
+extents = Vector2( 33.3269, 3.16734 )
+
+[sub_resource type="RectangleShape2D" id=17]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.0466, 3.16734 )
+
+[sub_resource type="RectangleShape2D" id=18]
+
+custom_solver_bias = 0.0
+extents = Vector2( 61.5847, 3.80081 )
+
+[sub_resource type="RectangleShape2D" id=19]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.6362, 4.43428 )
+
+[sub_resource type="RectangleShape2D" id=20]
+
+custom_solver_bias = 0.0
+extents = Vector2( 14.4934, 3.80103 )
+
+[sub_resource type="RectangleShape2D" id=21]
+
+custom_solver_bias = 0.0
+extents = Vector2( 112.962, 3.16731 )
+
+[sub_resource type="RectangleShape2D" id=22]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.3516, 3.8008 )
+
+[sub_resource type="RectangleShape2D" id=23]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.6401, 3.16753 )
+
+[sub_resource type="RectangleShape2D" id=24]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.3533, 1.90056 )
+
+[sub_resource type="RectangleShape2D" id=25]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.2551, 3.1673 )
+
+[sub_resource type="RectangleShape2D" id=26]
+
+custom_solver_bias = 0.0
+extents = Vector2( 45.5242, 2.53382 )
+
+[sub_resource type="RectangleShape2D" id=27]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.3906, 2.53382 )
+
+[sub_resource type="RectangleShape2D" id=28]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30.5159, 3.80079 )
+
+[sub_resource type="RectangleShape2D" id=29]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30.5162, 3.8008 )
+
+[sub_resource type="RectangleShape2D" id=30]
+
+custom_solver_bias = 0.0
+extents = Vector2( 94.7347, 3.16731 )
+
+[sub_resource type="RectangleShape2D" id=31]
+
+custom_solver_bias = 0.0
+extents = Vector2( 108.586, 1.90033 )
+
+[sub_resource type="RectangleShape2D" id=32]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.8123, 2.53379 )
+
+[sub_resource type="RectangleShape2D" id=33]
+
+custom_solver_bias = 0.0
+extents = Vector2( 50.3623, 3.16727 )
+
+[sub_resource type="RectangleShape2D" id=34]
+
+custom_solver_bias = 0.0
+extents = Vector2( 48.932, 3.80075 )
+
+[sub_resource type="RectangleShape2D" id=35]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30.7697, 4.43423 )
+
+[sub_resource type="RectangleShape2D" id=36]
+
+custom_solver_bias = 0.0
+extents = Vector2( 31.6263, 3.80075 )
+
+[sub_resource type="RectangleShape2D" id=37]
+
+custom_solver_bias = 0.0
+extents = Vector2( 50.4635, 1.26682 )
+
+[sub_resource type="RectangleShape2D" id=38]
+
+custom_solver_bias = 0.0
+extents = Vector2( 11.9328, 3.16727 )
+
+[sub_resource type="RectangleShape2D" id=39]
+
+custom_solver_bias = 0.0
+extents = Vector2( 11.9328, 3.16727 )
+
+[sub_resource type="RectangleShape2D" id=40]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.8753, 3.16727 )
+
+[sub_resource type="RectangleShape2D" id=41]
+
+custom_solver_bias = 0.0
+extents = Vector2( 47.8735, 4.17194 )
+
+[sub_resource type="RectangleShape2D" id=42]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2.67313, 4.88008 )
+
+[sub_resource type="RectangleShape2D" id=43]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.23727, 6.04866 )
+
+[sub_resource type="RectangleShape2D" id=44]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.76642, 5.43892 )
+
+[sub_resource type="RectangleShape2D" id=45]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.62274, 6.38913 )
+
+[sub_resource type="RectangleShape2D" id=46]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.96179, 5.75565 )
+
+[sub_resource type="RectangleShape2D" id=47]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.67737, 5.4389 )
+
+[sub_resource type="RectangleShape2D" id=48]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.53369, 6.38913 )
+
+[sub_resource type="RectangleShape2D" id=49]
+
+custom_solver_bias = 0.0
+extents = Vector2( 866.841, 3.53847 )
+
+[node name="main" type="Node" index="0" groups=[
+"main",
+]]
+
+script = ExtResource( 1 )
+jugador1 = ExtResource( 2 )
+vida_j1 = ExtResource( 3 )
+jugador2 = ExtResource( 4 )
+vida_j2 = ExtResource( 5 )
+bala_comun = ExtResource( 6 )
+bala_burbuja = ExtResource( 7 )
+bala_abanico = ExtResource( 8 )
+bala_laser = ExtResource( 9 )
+bala_giratoria = ExtResource( 10 )
+bala_enemigo = ExtResource( 11 )
+bala_boss1 = ExtResource( 12 )
+scn_gameover = ExtResource( 13 )
+j1_vida = 2
+j2_vida = 2
+
+[node name="GUI" type="CanvasLayer" parent="." index="0" groups=[
+"gui",
+]]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Nivel 1" type="Node" parent="." index="1" groups=[
+"nivel",
+]]
+
+[node name="background" type="Sprite" parent="Nivel 1" index="0"]
+
+editor/display_folded = true
+position = Vector2( 2052.13, 126.586 )
+scale = Vector2( 1.1679, 1.57857 )
+texture = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="suelo" type="StaticBody2D" parent="Nivel 1/background" index="0" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo" index="0"]
+
+position = Vector2( 356.183, -3.75142 )
+shape = SubResource( 1 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="suelo2" type="StaticBody2D" parent="Nivel 1/background" index="1" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo2" index="0"]
+
+position = Vector2( 935.964, -3.11796 )
+shape = SubResource( 2 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="suelo3" type="StaticBody2D" parent="Nivel 1/background" index="2" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo3" index="0"]
+
+position = Vector2( 1269.99, -1.83119 )
+shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="suelo4" type="StaticBody2D" parent="Nivel 1/background" index="3" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo4" index="0"]
+
+position = Vector2( 1590.04, -35.4751 )
+shape = SubResource( 4 )
+one_way_collision = true
+
+[node name="suelo5" type="StaticBody2D" parent="Nivel 1/background" index="4" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo5" index="0"]
+
+position = Vector2( 1928.25, -3.16744 )
+shape = SubResource( 5 )
+one_way_collision = true
+
+[node name="suelo6" type="StaticBody2D" parent="Nivel 1/background" index="5" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo6" index="0"]
+
+position = Vector2( 2085.8, -37.3756 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="suelo7" type="StaticBody2D" parent="Nivel 1/background" index="6" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo7" index="0"]
+
+position = Vector2( 2229.65, -3.16744 )
+shape = SubResource( 7 )
+one_way_collision = true
+
+[node name="suelo8" type="StaticBody2D" parent="Nivel 1/background" index="7" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo8" index="0"]
+
+position = Vector2( 2358.08, -3.80093 )
+shape = SubResource( 8 )
+one_way_collision = true
+
+[node name="suelo9" type="StaticBody2D" parent="Nivel 1/background" index="8" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo9" index="0"]
+
+position = Vector2( 2454.84, 28.5068 )
+shape = SubResource( 9 )
+one_way_collision = true
+
+[node name="suelo10" type="StaticBody2D" parent="Nivel 1/background" index="9" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo10" index="0"]
+
+position = Vector2( 2501.07, 60.8144 )
+shape = SubResource( 10 )
+one_way_collision = true
+
+[node name="suelo11" type="StaticBody2D" parent="Nivel 1/background" index="10" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo11" index="0"]
+
+position = Vector2( 2583.27, -3.16747 )
+shape = SubResource( 11 )
+one_way_collision = true
+
+[node name="suelo12" type="StaticBody2D" parent="Nivel 1/background" index="11" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo12" index="0"]
+
+position = Vector2( 2614.95, -36.1087 )
+shape = SubResource( 12 )
+one_way_collision = true
+
+[node name="suelo13" type="StaticBody2D" parent="Nivel 1/background" index="12" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo13" index="0"]
+
+position = Vector2( 2709.99, -2.534 )
+shape = SubResource( 13 )
+one_way_collision = true
+
+[node name="suelo14" type="StaticBody2D" parent="Nivel 1/background" index="13" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo14" index="0"]
+
+position = Vector2( 2790.48, 27.8732 )
+shape = SubResource( 14 )
+one_way_collision = true
+
+[node name="suelo15" type="StaticBody2D" parent="Nivel 1/background" index="14" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo15" index="0"]
+
+position = Vector2( 2853.84, 92.4886 )
+shape = SubResource( 15 )
+one_way_collision = true
+
+[node name="suelo16" type="StaticBody2D" parent="Nivel 1/background" index="15" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo16" index="0"]
+
+position = Vector2( 2967.72, 60.1809 )
+shape = SubResource( 16 )
+one_way_collision = true
+
+[node name="suelo17" type="StaticBody2D" parent="Nivel 1/background" index="16" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo17" index="0"]
+
+position = Vector2( 3062.76, 29.1402 )
+shape = SubResource( 17 )
+one_way_collision = true
+
+[node name="suelo18" type="StaticBody2D" parent="Nivel 1/background" index="17" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo18" index="0"]
+
+position = Vector2( 3159.52, -3.80099 )
+shape = SubResource( 18 )
+one_way_collision = true
+
+[node name="suelo19" type="StaticBody2D" parent="Nivel 1/background" index="18" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo19" index="0"]
+
+position = Vector2( 3238.29, 29.1402 )
+shape = SubResource( 19 )
+one_way_collision = true
+
+[node name="suelo20" type="StaticBody2D" parent="Nivel 1/background" index="19" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo20" index="0"]
+
+position = Vector2( 3269.97, 61.4479 )
+shape = SubResource( 20 )
+one_way_collision = true
+
+[node name="suelo21" type="StaticBody2D" parent="Nivel 1/background" index="20" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo21" index="0"]
+
+position = Vector2( 3211.74, 94.389 )
+shape = SubResource( 21 )
+one_way_collision = true
+
+[node name="suelo22" type="StaticBody2D" parent="Nivel 1/background" index="21" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo22" index="0"]
+
+position = Vector2( 2598.67, 93.7555 )
+shape = SubResource( 22 )
+one_way_collision = true
+
+[node name="suelo23" type="StaticBody2D" parent="Nivel 1/background" index="22" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo23" index="0"]
+
+position = Vector2( 2631.21, 46.2442 )
+shape = SubResource( 23 )
+one_way_collision = true
+
+[node name="suelo24" type="StaticBody2D" parent="Nivel 1/background" index="23" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo24" index="0"]
+
+position = Vector2( 2438.56, 93.7555 )
+shape = SubResource( 24 )
+one_way_collision = true
+
+[node name="suelo25" type="StaticBody2D" parent="Nivel 1/background" index="24" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo25" index="0"]
+
+position = Vector2( 2326.39, 30.4071 )
+shape = SubResource( 25 )
+one_way_collision = true
+
+[node name="suelo26" type="StaticBody2D" parent="Nivel 1/background" index="25" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo26" index="0"]
+
+position = Vector2( 2183.39, 29.7736 )
+shape = SubResource( 26 )
+one_way_collision = true
+
+[node name="suelo27" type="StaticBody2D" parent="Nivel 1/background" index="26" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo27" index="0"]
+
+position = Vector2( 2087.49, 46.8777 )
+shape = SubResource( 27 )
+one_way_collision = true
+
+[node name="suelo28" type="StaticBody2D" parent="Nivel 1/background" index="27" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo28" index="0"]
+
+position = Vector2( 2007.01, 62.0813 )
+shape = SubResource( 28 )
+one_way_collision = true
+
+[node name="suelo29" type="StaticBody2D" parent="Nivel 1/background" index="28" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo29" index="0"]
+
+position = Vector2( 1911.11, 62.7148 )
+shape = SubResource( 29 )
+one_way_collision = true
+
+[node name="suelo30" type="StaticBody2D" parent="Nivel 1/background" index="29" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo30" index="0"]
+
+position = Vector2( 1781.82, 95.656 )
+shape = SubResource( 30 )
+one_way_collision = true
+
+[node name="suelo31" type="StaticBody2D" parent="Nivel 1/background" index="30" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo31" index="0"]
+
+position = Vector2( 1671.36, 29.7736 )
+shape = SubResource( 31 )
+one_way_collision = true
+
+[node name="suelo32" type="StaticBody2D" parent="Nivel 1/background" index="31" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo32" index="0"]
+
+position = Vector2( 1494.97, 46.2442 )
+shape = SubResource( 32 )
+one_way_collision = true
+
+[node name="suelo33" type="StaticBody2D" parent="Nivel 1/background" index="32" groups=[
+"suelo",
+"suelo_agua",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo33" index="0"]
+
+position = Vector2( 1416.2, 96.2894 )
+shape = SubResource( 33 )
+one_way_collision = true
+
+[node name="suelo34" type="StaticBody2D" parent="Nivel 1/background" index="33" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo34" index="0"]
+
+position = Vector2( 647.297, 46.2442 )
+shape = SubResource( 34 )
+one_way_collision = true
+
+[node name="suelo35" type="StaticBody2D" parent="Nivel 1/background" index="34" groups=[
+"suelo",
+"suelo_agua",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo35" index="0"]
+
+position = Vector2( 600.203, 95.656 )
+shape = SubResource( 35 )
+one_way_collision = true
+
+[node name="suelo36" type="StaticBody2D" parent="Nivel 1/background" index="35" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo36" index="0"]
+
+position = Vector2( 404.98, 31.0406 )
+shape = SubResource( 36 )
+one_way_collision = true
+
+[node name="suelo37" type="StaticBody2D" parent="Nivel 1/background" index="36" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo37" index="0"]
+
+position = Vector2( 166.089, 30.4071 )
+shape = SubResource( 37 )
+one_way_collision = true
+
+[node name="suelo38" type="StaticBody2D" parent="Nivel 1/background" index="37" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo38" index="0"]
+
+position = Vector2( 229.451, 61.4478 )
+shape = SubResource( 38 )
+one_way_collision = true
+
+[node name="suelo39" type="StaticBody2D" parent="Nivel 1/background" index="38" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo39" index="0"]
+
+position = Vector2( 325.35, 60.8143 )
+shape = SubResource( 39 )
+one_way_collision = true
+
+[node name="suelo40" type="StaticBody2D" parent="Nivel 1/background" index="39" groups=[
+"suelo",
+"suelo_agua",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo40" index="0"]
+
+position = Vector2( 280.397, 95.656 )
+shape = SubResource( 40 )
+one_way_collision = true
+
+[node name="suelo41" type="StaticBody2D" parent="Nivel 1/background" index="40" groups=[
+"suelo",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/suelo41" index="0"]
+
+position = Vector2( 3175.76, 46.5609 )
+shape = SubResource( 41 )
+one_way_collision = true
+
+[node name="sueloinvisible1" type="StaticBody2D" parent="Nivel 1/background" index="41" groups=[
+"sinvisible",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/sueloinvisible1" index="0"]
+
+position = Vector2( 247.86, 101.041 )
+shape = SubResource( 42 )
+
+[node name="sueloinvisible2" type="StaticBody2D" parent="Nivel 1/background" index="42" groups=[
+"sinvisible",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/sueloinvisible2" index="0"]
+
+position = Vector2( 307.368, 101.357 )
+shape = SubResource( 43 )
+
+[node name="sueloinvisible3" type="StaticBody2D" parent="Nivel 1/background" index="43" groups=[
+"sinvisible",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/sueloinvisible3" index="0"]
+
+position = Vector2( 573.658, 100.407 )
+shape = SubResource( 44 )
+
+[node name="sueloinvisible4" type="StaticBody2D" parent="Nivel 1/background" index="44" groups=[
+"sinvisible",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/sueloinvisible4" index="0"]
+
+position = Vector2( 625.461, 100.407 )
+shape = SubResource( 45 )
+
+[node name="sueloinvisible5" type="StaticBody2D" parent="Nivel 1/background" index="45" groups=[
+"sinvisible",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/sueloinvisible5" index="0"]
+
+position = Vector2( 1372.1, 101.041 )
+shape = SubResource( 46 )
+
+[node name="sueloinvisible6" type="StaticBody2D" parent="Nivel 1/background" index="46" groups=[
+"sinvisible",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/sueloinvisible6" index="0"]
+
+position = Vector2( 1459.01, 100.407 )
+shape = SubResource( 47 )
+
+[node name="sueloinvisible7" type="StaticBody2D" parent="Nivel 1/background" index="47" groups=[
+"sinvisible",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/sueloinvisible7" index="0"]
+
+position = Vector2( 1692.76, 101.674 )
+shape = SubResource( 48 )
+
+[node name="agua1" type="StaticBody2D" parent="Nivel 1/background" index="48" groups=[
+"suelo",
+"agua",
+]]
+
+editor/display_folded = true
+position = Vector2( -1687.22, -8.23528 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel 1/background/agua1" index="0"]
+
+position = Vector2( 824.536, 104.842 )
+shape = SubResource( 49 )
+
+[node name="Punto_Spawn" type="Position2D" parent="Nivel 1" index="1" groups=[
+"spawn_j",
+]]
+
+position = Vector2( 116.462, 65.7236 )
+
+[node name="Maquinas_PU" type="Node" parent="Nivel 1" index="2"]
+
+editor/display_folded = true
+
+[node name="Maquina_PowerUP" parent="Nivel 1/Maquinas_PU" index="0" instance=ExtResource( 15 )]
+
+[node name="Maquina_PowerUP2" parent="Nivel 1/Maquinas_PU" index="1" instance=ExtResource( 15 )]
+
+position = Vector2( 1883.8, 172.967 )
+
+[node name="Maquina_PowerUP3" parent="Nivel 1/Maquinas_PU" index="2" instance=ExtResource( 15 )]
+
+position = Vector2( 2707.56, 224.217 )
+
+[node name="Maquina_PowerUP4" parent="Nivel 1/Maquinas_PU" index="3" instance=ExtResource( 15 )]
+
+position = Vector2( 2856.79, 222.71 )
+
+[node name="Enemigos_Base" type="Node" parent="Nivel 1" index="3"]
+
+editor/display_folded = true
+
+[node name="EnemigoBasse2" parent="Nivel 1/Enemigos_Base" index="0" instance=ExtResource( 16 )]
+
+position = Vector2( 456.594, 75.5597 )
+
+[node name="EnemigoBasse3" parent="Nivel 1/Enemigos_Base" index="1" instance=ExtResource( 16 )]
+
+position = Vector2( 670.5, 83.5 )
+
+[node name="EnemigoBasse4" parent="Nivel 1/Enemigos_Base" index="2" instance=ExtResource( 16 )]
+
+position = Vector2( 786, 83 )
+
+[node name="EnemigoBasse5" parent="Nivel 1/Enemigos_Base" index="3" instance=ExtResource( 16 )]
+
+position = Vector2( 886.5, 82.5 )
+
+[node name="EnemigoBasse6" parent="Nivel 1/Enemigos_Base" index="4" instance=ExtResource( 16 )]
+
+position = Vector2( 1217.17, 62.0242 )
+
+[node name="EnemigoBasse7" parent="Nivel 1/Enemigos_Base" index="5" instance=ExtResource( 16 )]
+
+position = Vector2( 1129.79, 63.0314 )
+
+[node name="EnemigoBasse8" parent="Nivel 1/Enemigos_Base" index="6" instance=ExtResource( 16 )]
+
+position = Vector2( 1469, 80 )
+
+[node name="EnemigoBasse9" parent="Nivel 1/Enemigos_Base" index="7" instance=ExtResource( 16 )]
+
+position = Vector2( 1704.29, 23.2284 )
+
+[node name="EnemigoBasse10" parent="Nivel 1/Enemigos_Base" index="8" instance=ExtResource( 16 )]
+
+position = Vector2( 1612.5, 78 )
+
+[node name="EnemigoBasse12" parent="Nivel 1/Enemigos_Base" index="9" instance=ExtResource( 16 )]
+
+position = Vector2( 1819.5, 29 )
+
+[node name="EnemigoBasse14" parent="Nivel 1/Enemigos_Base" index="10" instance=ExtResource( 16 )]
+
+position = Vector2( 2061, 28.5 )
+
+[node name="EnemigoBasse15" parent="Nivel 1/Enemigos_Base" index="11" instance=ExtResource( 16 )]
+
+position = Vector2( 2172.5, 28 )
+
+[node name="EnemigoBasse16" parent="Nivel 1/Enemigos_Base" index="12" instance=ExtResource( 16 )]
+
+position = Vector2( 2259.5, 81 )
+
+[node name="EnemigoBasse17" parent="Nivel 1/Enemigos_Base" index="13" instance=ExtResource( 16 )]
+
+position = Vector2( 2327, 81 )
+
+[node name="EnemigoBasse18" parent="Nivel 1/Enemigos_Base" index="14" instance=ExtResource( 16 )]
+
+position = Vector2( 2458, 30.5 )
+
+[node name="EnemigoBasse27" parent="Nivel 1/Enemigos_Base" index="15" instance=ExtResource( 16 )]
+
+position = Vector2( 2445.5, 186 )
+
+[node name="EnemigoBasse28" parent="Nivel 1/Enemigos_Base" index="16" instance=ExtResource( 16 )]
+
+position = Vector2( 2335.5, 188.5 )
+
+[node name="EnemigoBasse29" parent="Nivel 1/Enemigos_Base" index="17" instance=ExtResource( 16 )]
+
+position = Vector2( 2225.5, 241 )
+
+[node name="EnemigoBasse30" parent="Nivel 1/Enemigos_Base" index="18" instance=ExtResource( 16 )]
+
+position = Vector2( 2159.5, 240.5 )
+
+[node name="EnemigoBasse31" parent="Nivel 1/Enemigos_Base" index="19" instance=ExtResource( 16 )]
+
+position = Vector2( 2119, 138.5 )
+
+[node name="EnemigoBasse32" parent="Nivel 1/Enemigos_Base" index="20" instance=ExtResource( 16 )]
+
+position = Vector2( 2042, 139.5 )
+
+[node name="EnemigoBasse33" parent="Nivel 1/Enemigos_Base" index="21" instance=ExtResource( 16 )]
+
+position = Vector2( 1979, 139 )
+
+[node name="EnemigoBasse34" parent="Nivel 1/Enemigos_Base" index="22" instance=ExtResource( 16 )]
+
+position = Vector2( 1924, 139 )
+
+[node name="EnemigoBasse35" parent="Nivel 1/Enemigos_Base" index="23" instance=ExtResource( 16 )]
+
+position = Vector2( 1821, 163.5 )
+
+[node name="EnemigoBasse36" parent="Nivel 1/Enemigos_Base" index="24" instance=ExtResource( 16 )]
+
+position = Vector2( 1762.5, 239 )
+
+[node name="EnemigoBasse19" parent="Nivel 1/Enemigos_Base" index="25" instance=ExtResource( 16 )]
+
+position = Vector2( 2548, 30 )
+
+[node name="EnemigoBasse20" parent="Nivel 1/Enemigos_Base" index="26" instance=ExtResource( 16 )]
+
+position = Vector2( 2679.5, 80.5 )
+
+[node name="EnemigoBasse21" parent="Nivel 1/Enemigos_Base" index="27" instance=ExtResource( 16 )]
+
+position = Vector2( 2847.5, 79.5 )
+
+[node name="EnemigoBasse22" parent="Nivel 1/Enemigos_Base" index="28" instance=ExtResource( 16 )]
+
+position = Vector2( 3035, 178.5 )
+
+[node name="EnemigoBasse23" parent="Nivel 1/Enemigos_Base" index="29" instance=ExtResource( 16 )]
+
+position = Vector2( 3309, 133 )
+
+[node name="EnemigoBasse24" parent="Nivel 1/Enemigos_Base" index="30" instance=ExtResource( 16 )]
+
+position = Vector2( 3402, 131.5 )
+
+[node name="EnemigoBasse25" parent="Nivel 1/Enemigos_Base" index="31" instance=ExtResource( 16 )]
+
+position = Vector2( 3672.5, 135 )
+
+[node name="EnemigoBasse26" parent="Nivel 1/Enemigos_Base" index="32" instance=ExtResource( 16 )]
+
+position = Vector2( 3446.5, 233.5 )
+
+[node name="Enemigos_Selva" type="Node" parent="Nivel 1" index="4"]
+
+editor/display_folded = true
+
+[node name="PuntoSpawnEnemigoBase" parent="Nivel 1/Enemigos_Selva" index="0" instance=ExtResource( 16 )]
+
+position = Vector2( 768.945, 234.723 )
+enemigo_base = ExtResource( 17 )
+
+[node name="PuntoSpawnEnemigoBase2" parent="Nivel 1/Enemigos_Selva" index="1" instance=ExtResource( 16 )]
+
+position = Vector2( 1870.81, 24.4486 )
+enemigo_base = ExtResource( 17 )
+
+[node name="PuntoSpawnEnemigoBase3" parent="Nivel 1/Enemigos_Selva" index="2" instance=ExtResource( 16 )]
+
+position = Vector2( 3960.12, 38.5975 )
+enemigo_base = ExtResource( 17 )
+
+[node name="max" type="Position2D" parent="Nivel 1" index="5" groups=[
+"max",
+]]
+
+position = Vector2( 4068, 318 )
+
+[node name="min" type="Position2D" parent="Nivel 1" index="6" groups=[
+"min",
+]]
+
+position = Vector2( 34, -67 )
+
+[node name="Puente Entero" parent="Nivel 1" index="7" instance=ExtResource( 18 )]
+
+[node name="Puente Entero2" parent="Nivel 1" index="8" instance=ExtResource( 18 )]
+
+editor/display_folded = true
+
+[node name="Puente" parent="Nivel 1/Puente Entero2" index="0"]
+
+position = Vector2( 1292.12, 122.979 )
+
+[node name="Puente2" parent="Nivel 1/Puente Entero2" index="1"]
+
+position = Vector2( 1341.12, 122.979 )
+
+[node name="Puente3" parent="Nivel 1/Puente Entero2" index="2"]
+
+position = Vector2( 1391.12, 122.979 )
+
+[node name="AreaExplosion" parent="Nivel 1/Puente Entero2" index="3"]
+
+position = Vector2( 1296.81, 115.701 )
+
+[node name="AreaExplosion2" parent="Nivel 1/Puente Entero2" index="4"]
+
+position = Vector2( 1354.31, 115.701 )
+
+[node name="AreaExplosion3" parent="Nivel 1/Puente Entero2" index="5"]
+
+position = Vector2( 1391.31, 115.701 )
+
+[node name="Torreta2" parent="Nivel 1" index="9" instance=ExtResource( 19 )]
+
+[node name="Torreta3" parent="Nivel 1" index="10" instance=ExtResource( 19 )]
+
+position = Vector2( 450, -50.5 )
+
+[node name="Torreta4" parent="Nivel 1" index="11" instance=ExtResource( 19 )]
+
+position = Vector2( 673.5, -49.5 )
+
+[node name="Torreta5" parent="Nivel 1" index="12" instance=ExtResource( 19 )]
+
+position = Vector2( 2170.5, 51 )
+
+[node name="Torreta6" parent="Nivel 1" index="13" instance=ExtResource( 19 )]
+
+position = Vector2( 2318, 51 )
+
+[node name="PowerUp" parent="Nivel 1" index="14" instance=ExtResource( 20 )]
+
+[node name="Boss_Base" parent="Nivel 1" index="15" instance=ExtResource( 21 )]
+
+[node name="PowerUp2" parent="Nivel 1" index="16" instance=ExtResource( 20 )]
+
+position = Vector2( 1581.24, 0.493835 )
+
+[node name="PowerUp3" parent="Nivel 1" index="17" instance=ExtResource( 20 )]
+
+position = Vector2( 3219.04, -14.3111 )
+
+[node name="PowerUp4" parent="Nivel 1" index="18" instance=ExtResource( 20 )]
+
+position = Vector2( 3222.74, 44.9087 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2" groups=[
+"camara",
+]]
+
+editor/display_folded = true
+position = Vector2( 269.25, 124.75 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+script = ExtResource( 22 )
+_sections_unfolded = [ "Drag Margin", "Editor" ]
+
+[node name="pos_x" type="Position2D" parent="Camera2D" index="0"]
+
+position = Vector2( -2, -2 )
+
+[node name="pos_x2" type="Position2D" parent="Camera2D" index="1"]
+
+position = Vector2( -328.5, -5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 23 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+
+[editable path="Nivel 1/Puente Entero2"]

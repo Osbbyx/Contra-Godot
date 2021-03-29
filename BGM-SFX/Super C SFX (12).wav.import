@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Super C SFX (12).wav-9a14d22f4595ae16fa7b872d60805a09.sample"
+
+[deps]
+
+source_file="res://BGM-SFX/Super C SFX (12).wav"
+source_md5="0f8aff065447b2776de50605e3d86543"
+
+dest_files=[ "res://.import/Super C SFX (12).wav-9a14d22f4595ae16fa7b872d60805a09.sample" ]
+dest_md5="e45bab4ccf5e58bea04b011e29316ad7"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

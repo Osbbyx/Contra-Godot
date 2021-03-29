@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/EnemigoSpawnBase.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/EnemigoBasse_1.tscn" type="PackedScene" id=2]
+
+[node name="PuntoSpawnEnemigoBase" type="Position2D"]
+
+position = Vector2( 369.5, 35 )
+script = ExtResource( 1 )
+enemigo_base = ExtResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="0"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+
+
